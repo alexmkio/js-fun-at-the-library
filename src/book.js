@@ -9,7 +9,7 @@ function buildMainCharacter(name, birthPlace, age) {
   this.characterBirthPlace = birthPlace;
   this.characterAge = age;
 }
-var character = new BuildMainCharacter("Prince Jones Jr.", "Washington D.C.", 25);
+var character = new buildMainCharacter("Prince Jones Jr.", "Washington D.C.", 25);
 // character
 // https://codeburst.io/various-ways-to-create-javascript-object-9563c6887a47
 // https://www.programiz.com/javascript/constructor-function
