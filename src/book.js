@@ -4,7 +4,7 @@ function createTitle(title) {
 createTitle("Book Title 1")
 
 
-function BuildMainCharacter(name, birthPlace, age) {
+function buildMainCharacter(name, birthPlace, age) {
   this.characterName = name;
   this.characterBirthPlace = birthPlace;
   this.characterAge = age;
