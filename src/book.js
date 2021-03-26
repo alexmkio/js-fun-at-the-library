@@ -17,7 +17,7 @@ var character = new buildMainCharacter("Prince Jones Jr.", 25, "he/him")
 // looks good to me so why doesn't it pass? (new)
 
 // below works
-// var reviews = new Set(['good', 'bad']);
+// var reviews = new Set(['good', 'bad'])
 // function saveReview(review) {
 //   if (reviews.has(review)) {
 //     console.log('has review')
@@ -25,7 +25,7 @@ var character = new buildMainCharacter("Prince Jones Jr.", 25, "he/him")
 //     console.log('doesnt have that one')
 //   }
 // }
-var reviews = new Set(['good', 'bad']);
+var reviews = new Set(['good', 'bad'])
 function saveReview(review) {
   if (reviews.has(review)) {
     return
@@ -46,13 +46,13 @@ function calculatePageCount(title) {
 
 // how can I get this data to work with the functions above? pages for example
 function writeBook(title, characterName, pages, genre) {
-  this.title = title;
-  this.mainCharacter = characterName;
-  this.pageCount = pages;
-  this.genre = genre;
+  this.title = title
+  this.mainCharacter = characterName
+  this.pageCount = pages
+  this.genre = genre
 }
-// var book1 = new writeBook('Don Quixote', 'Alonso Quijano', 863, 'Novel');
-// book1.bookName
+// var book1 = new writeBook('Don Quixote', 'Alonso Quijano', 863, 'Novel')
+// book1.title
 
 
 function editBook(pages) {
