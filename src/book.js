@@ -36,8 +36,9 @@ function saveReview(review) {
 // saveReview('')
 // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set
 
-function calculatePageCount() {
-
+var pages
+function calculatePageCount(title) {
+  pages = title.length * 20
 }
 
 
