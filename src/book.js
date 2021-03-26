@@ -1,8 +1,10 @@
 function createTitle(title) {
-  return "modified " + title;
+  this.modifiedTitle = `Modified ${title}`;
+  return this.modifiedTitle
 }
-createTitle("Book Title 1")
-
+// why doesn't this pass?!
+// var title1 = createTitle("Prince Jones Jr.")
+// console.log(title1)
 
 function buildMainCharacter(name, birthPlace, age) {
   this.characterName = name;
@@ -10,14 +12,17 @@ function buildMainCharacter(name, birthPlace, age) {
   this.characterAge = age;
 }
 var character = new buildMainCharacter("Prince Jones Jr.", "Washington D.C.", 25);
-// character
-// https://codeburst.io/various-ways-to-create-javascript-object-9563c6887a47
-// https://www.programiz.com/javascript/constructor-function
+// character.characterAge
+// https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Working_with_Objects#using_a_constructor_function
+// looks good to me so why doesn't it pass? (new)
 
+var reviews = []
 function saveReview() {
 
 }
-
+// https://stackoverflow.com/questions/7376598/in-javascript-how-do-i-check-if-an-array-has-duplicate-values
+// https://www.codegrepper.com/code-examples/javascript/add+only+unique+values+to+array+javascript+using+spread+operator
+// set looks real cool: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set
 
 function calculatePageCount() {
 
