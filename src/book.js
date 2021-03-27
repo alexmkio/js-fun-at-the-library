@@ -1,17 +1,30 @@
 function createTitle(title) {
-  this.modifiedTitle = `Modified ${title}`
-  return this.modifiedTitle
+  if (title.includes('The')) {
+    return title
+  } else {
+    this.modifiedTitle = `The ${title}`
+    return this.modifiedTitle
+  }
+  // if first four characters does not equal "The "
+  // append "The "-
+  // else
+  // don't modify
+  // this.modifiedTitle = `The ${title}`
+  // return this.modifiedTitle
 }
 // why doesn't this pass?!
 // var title1 = createTitle("Between the World and Me")
 // console.log(title1)
 
 function buildMainCharacter(characterName, characterAge, characterPronouns) {
-  this.name = characterName
-  this.age = characterAge
-  this.pronouns = characterPronouns
+  var character = {
+  name: characterName,
+  age: characterAge,
+  pronouns: characterPronouns,
+  }
+  return character
 }
-var character = new buildMainCharacter("Prince Jones Jr.", 25, "he/him")
+
 // character.pronouns
 // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Working_with_Objects#using_a_constructor_function
 // looks good to me so why doesn't it pass? (new)
@@ -25,32 +38,38 @@ var character = new buildMainCharacter("Prince Jones Jr.", 25, "he/him")
 //     console.log('doesnt have that one')
 //   }
 // }
-var reviews = new Set(['good', 'bad'])
-function saveReview(review) {
-  if (reviews.has(review)) {
-    return
-  } else {
+
+function saveReview(review, reviews) {
+  // if (reviews.has(review)) {
+  //   return
+  // } else {
     reviews.push(review)
-  }
+  // }
+    return reviews.length
 }
 // saveReview('')
 // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set
 
 
 // why
-var pages = 100
+
 function calculatePageCount(title) {
-  pages = pages + (title.length * 20)
+  var pages = (title.length * 20)
+  return pages
 }
 
 
 // how can I get this data to work with the functions above? pages for example
-function writeBook(title, characterName, pages, genre) {
-  this.title = title
-  this.mainCharacter = characterName
-  this.pageCount = pages
-  this.genre = genre
+function writeBook(title, characterName, genre) {
+  var book = {
+  title: title,
+  mainCharacter: characterName,
+  pageCount: calculatePageCount(title),
+  genre: genre,
+  }
+  return book
 }
+
 // var book1 = new writeBook('Don Quixote', 'Alonso Quijano', 863, 'Novel')
 // book1.title
 
@@ -65,6 +84,6 @@ module.exports = {
   buildMainCharacter,
   saveReview,
   calculatePageCount,
-  // writeBook,
-  // editBook
+  writeBook,
+  editBook
 }
